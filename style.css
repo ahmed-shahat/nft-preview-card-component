@@ -1,0 +1,147 @@
+/* css reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 1rem === 10px */
+html {
+  font-size: 10px;
+}
+
+/* css variables */
+:root {
+  /* ### Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* ### Neutral */
+  /* (main BG) */
+  --Very-dark-blue: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --Very-dark: hsl(216, 50%, 16%);
+  /* (line) */
+  --Very-blue: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --main-font: "Outfit", sans-serif;
+}
+/* main selectors style */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: var(--Very-dark-blue);
+  font-family: var(--main-font);
+}
+h1 {
+  font-size: 2rem;
+  color: var(--White);
+  /* margin: 1.2rem 0; */
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.8rem;
+  color: var(--Soft-blue);
+  /* margin: 1.2rem 0; */
+  font-weight: 400;
+}
+h3 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--Cyan);
+}
+span {
+  font-size: 1.9rem;
+  color: var(--White);
+}
+
+.line {
+  background-color: var(--Very-blue);
+
+  width: 100%;
+  margin: 1rem;
+  height: 2px;
+}
+/* container style with card style using flex */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 32rem;
+  width: 100%;
+  background-color: var(--Very-dark);
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem var(--Very-blue);
+}
+/* header style with image style and card style */
+.card-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+/* section1  style with card style using flex */
+.card-title {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+  padding: 1rem 0;
+}
+/* section2 style with card style using flex */
+.card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.eth-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.price-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.time-p {
+  font-size: 1.6rem;
+  color: var(--Soft-blue);
+}
+
+/* footer style with card style using flex */
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.card-author > img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  span {
+    font-size: 1rem;
+  }
+  .container {
+    max-width: 18rem;
+  }
+  .card-details > * {
+    font-size: 0.2rem;
+    .time-p {
+      font-size: 0.9rem;
+    }
+  }
+}
